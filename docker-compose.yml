@@ -1,0 +1,12 @@
+networks:
+  caddy:
+    external: true
+
+services:
+  testssl:
+    container_name: testssl
+    networks:
+      - caddy
+    env_file: ./.env
+    restart: on-failure
+    image: hartge/testssl-web:v3.1
