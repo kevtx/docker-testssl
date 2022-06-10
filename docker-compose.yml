@@ -7,6 +7,6 @@ services:
     container_name: testssl
     networks:
       - caddy
-    env_file: ./.env
+    #env_file: ./.env
     restart: on-failure
     image: hartge/testssl-web:v3.1
